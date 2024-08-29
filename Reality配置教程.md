@@ -30,6 +30,8 @@
 
 > 可以要求AI根据上述示例扫描`Your_server_IP`的邻居，可以要求扫描5000个左右的“邻居”，`100`线程，`3`秒超时，文件名`Your_filename.csv`
 
+eg:扫描`100.100.100.100`的邻居,扫描数量8000个，`100`线程，`3`秒超时，文件名`100.csv`
+
 ~~啥也不懂直接`./RealiTLScanner Your_server_IP`~~  
 
 > 好了，下一步
@@ -55,7 +57,7 @@
             "listen_port": 443,
             "users": [
                 {
-                    "uuid": "",
+                    "uuid": "", // 执行sing-box generate uuid 生成
                     "flow": "xtls-rprx-vision"
                 }
             ],
