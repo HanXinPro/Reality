@@ -81,13 +81,51 @@ eg:扫描`100.100.100.100`的邻居,扫描数量8000个，`100`线程，`3`秒�
     "outbounds": [
         {
             "type": "socks",
+            "tag": "proxy-cheap",
             "server": "Your_socks_server_IP",
-            "server_port": Your_socks_server_Port,
+            "server_port": "Your_socks_server_Port",
             "version": "5",
             "username": "Your_socks_server_username",
             "password": "Your_socks_server_password"
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
         }
-    ]
+    ],
+    "route": {
+        "rules": [
+            {
+                "rule_set": [
+                    "geosite-anthropic",
+                    "geosite-openai"
+                ],
+                "outbound": "proxy-cheap"
+            }
+        ],
+        "rule_set": [
+            {
+                "tag": "geosite-anthropic",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-anthropic.srs",
+                "download_detour": "direct"
+            },
+            {
+                "tag": "geosite-openai",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-openai.srs",
+                "download_detour": "direct"
+            }
+        ],
+        "final": "direct"
+    },
+    "experimental": {
+        "cache_file": {
+            "enabled": true
+        }
+    }
 }
 ```
 写完的json配置可以在[在线编辑器](https://jsonlint.com/)中校对  
