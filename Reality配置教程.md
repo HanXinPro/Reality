@@ -6,27 +6,29 @@
 
 #### 下载扫描工具
 
-```wget https://github.com/XTLS/RealiTLScanner/releases/download/v0.2.1/RealiTLScanner-linux-64```
-```mv ./RealiTLScanner-linux-64 ./RealiTLScanner```  
-```chmod +x ./RealiTLScanner``` 
+```
+wget https://github.com/XTLS/RealiTLScanner/releases/download/v0.2.1/RealiTLScanner-linux-64
+mv ./RealiTLScanner-linux-64 ./RealiTLScanner  
+chmod +x ./RealiTLScanner
+```
 
 > 可以使用Claude等AI帮助理解，可以将以下示例发给AI：
 
 *Scan a specific IP, IP CIDR or domain:*  
-```./RealiTLScanner -addr 1.2.3.4```  
+`./RealiTLScanner -addr 1.2.3.4`  
 *Note: infinity mode will be enabled automatically if `addr` is an IP or domain*  
 
 *Show verbose output, including failed scans and infeasible targets:*  
-```./RealiTLScanner -addr 1.2.3.0/24 -v```
+`./RealiTLScanner -addr 1.2.3.0/24 -v`
 
 *Save results to a file, default: out.csv*  
-```./RealiTLScanner -addr www.microsoft.com -out file.csv```
+`./RealiTLScanner -addr www.microsoft.com -out file.csv`
 
 *Set a thread count, default: 1*  
-```./RealiTLScanner -addr wiki.ubuntu.com -thread 10```
+`./RealiTLScanner -addr wiki.ubuntu.com -thread 10`
 
-*Set a timeout for each scan, default: 10 (seconds)*  
-```./RealiTLScanner -addr 107.172.1.1/16 -timeout 5```  
+*Set a timeout for each scan, default: 10 (seconds)*
+`./RealiTLScanner -addr 107.172.1.1/16 -timeout 5`
 
 > 可以要求AI根据上述示例扫描`Your_server_IP`的邻居，可以要求扫描5000个左右的“邻居”，`100`线程，`3`秒超时，文件名`Your_filename.csv`
 
