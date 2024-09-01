@@ -85,7 +85,7 @@ eg:扫描`100.100.100.100`的邻居,扫描数量8000个，`100`线程，`3`秒�
         {
             "type": "socks",
             "tag": "proxy-cheap",
-            "server": "Your_socks_server_IP",
+            "server": "Your_socks_server_IP", // 替换成你的，下同
             "server_port": "Your_socks_server_Port",
             "version": "5",
             "username": "Your_socks_server_username",
