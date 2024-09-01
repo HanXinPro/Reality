@@ -135,13 +135,21 @@ eg:扫描`100.100.100.100`的邻居,扫描数量8000个，`100`线程，`3`秒�
 
 `Ctrl+S`保存
 
-启动sing-box
+启用sing-box
 
 `sudo systemctl enable sing-box`
 
+启动sing-box
+
 `sudo systemctl start sing-box`
 
+查看日志
+
 `sudo journalctl -u sing-box --output cat -e`
+
+重启sing-box
+
+`sudo systemctl restart sing-box`
 
 ### v2rayN创建节点  
 **enjoy!**  
