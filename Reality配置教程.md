@@ -2,9 +2,9 @@
 
 ## sing-box
 
-###*RealiTLScanner*扫描
+### *RealiTLScanner*扫描
 
-####下载扫描工具
+#### 下载扫描工具
 
 `wget https://github.com/XTLS/RealiTLScanner/releases/download/v0.2.1/RealiTLScanner-linux-64`  
 `mv ./RealiTLScanner-linux-64 ./RealiTLScanner`  
@@ -38,7 +38,7 @@ eg:扫描`100.100.100.100`的邻居,扫描数量8000个，`100`线程，`3`秒�
 
 ---  
 
-###安装sing-box
+### 安装sing-box
 
 > 如果你选择了sing-box内核，那就先安装sing-box，使用下面的代码
 
@@ -140,7 +140,7 @@ eg:扫描`100.100.100.100`的邻居,扫描数量8000个，`100`线程，`3`秒�
 
 `sudo journalctl -u sing-box --output cat -e`
 
-###v2rayN创建节点  
+### v2rayN创建节点  
 **enjoy!**  
 😊  
 
