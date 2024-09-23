@@ -159,3 +159,24 @@ eg:扫描`100.100.100.100`的邻居,扫描数量8000个，`100`线程，`3`秒�
 
 ## 开启BBR  
 详见[秋水逸冰](https://teddysun.com/489.html)
+
+# sing-box更新
+
+连接ssh，输入如下命令：
+```
+bash <(curl -fsSL https://sing-box.app/deb-install.sh)
+```
+提示类似字样表示更新成功：
+```
+root@localhost:~# bash <(curl -fsSL https://sing-box.app/deb-install.sh)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 10.9M  100 10.9M    0     0  3677k      0  0:00:03  0:00:03 --:--:-- 7856k
+(Reading database ... 104152 files and directories currently installed.)
+Preparing to unpack sing-box.deb ...
+Unpacking sing-box (1.9.6) over (1.9.4) ...
+Setting up sing-box (1.9.6) ...
+```
+重启sing-box：`sudo systemctl restart sing-box`
+查看日志观察有无报错：`sudo journalctl -u sing-box --output cat -e`
